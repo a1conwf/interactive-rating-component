@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  font-family: 'Overpass', sans-serif;
+  background-color: #131518;
+  color: #969FAD;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 3.545rem;
+  color: #fff;
+}
+
+.card,
+.thank__card {
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  border-radius: 3rem;
+}
+
+.card__star {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #262E38;
+  border-radius: 50%;
+}
+
+.card__content h1 {
+  margin-bottom: 0.7rem;
+}
+
+.card__content p {
+  margin-bottom: 2.4rem;
+}
+
+.card__rating ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+.card__rating ul li button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  line-height: 2.4rem;
+  color: #7C8798;
+  background-color: #262E38;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.card__rating ul li button:hover:not(.active) {
+  background-color: #7C8798;
+  color: #fff;
+}
+
+.card .submit__btn {
+  width: 100%;
+  padding: 1.1rem 0;
+  border: none;
+  outline: none;
+  border-radius: 2.25rem;
+  background-color: #FC7614;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.899rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.card .submit__btn:hover {
+  background-color: #fff;
+  color: #FC7614;
+}
+
+.card .active {
+  background-color: #FC7614;
+  color: #fff;
+}
+
+.thank__card {
+  text-align: center;
+}
+
+.thank__card .output__text {
+  display: inline-block;
+  color: #FC7614;
+  background-color: #262E38;
+  border-radius: 2.25rem;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 320px) {
+  .card,
+  .thank__card {
+    width: 300px;
+  }
+  .card {
+    padding: 2.4rem 2.4rem 3.2rem;
+  }
+  .card__star {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1.6rem;
+  }
+  .card__star img {
+    width: 14px;
+    height: 14px;
+  }
+  .card__content h1 {
+    font-size: 2.4rem;
+    line-height: 3.038rem;
+    margin-bottom: 1rem;
+  }
+  .card__content p {
+    max-width: 279px;
+    font-size: 1.4rem;
+  }
+  .card__rating {
+    margin-bottom: 2.4rem;
+  }
+  .card__rating ul li button {
+    width: 42px;
+    height: 42px;
+    font-size: 1.4rem;
+  }
+  .thank__card {
+    padding: 3.4rem 2.4rem 3.7rem 2.4rem;
+  }
+  .thank__card__img {
+    margin-bottom: 2.4rem;
+  }
+  .thank__card .output__text {
+    padding: 0.5rem 1.2rem;
+    margin-bottom: 2.9rem;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+  .thank__card__content h1 {
+    margin-bottom: 1.7rem;
+  }
+  .thank__card__content p {
+    max-width: 279px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card,
+  .thank__card {
+    width: 412px;
+  }
+  .card {
+    padding: 3.2rem 3.9rem 3.2rem;
+  }
+  .card__star {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 3rem;
+  }
+  .card__star img {
+    width: 16px;
+    height: 16px;
+  }
+  .card__content h1 {
+    font-size: 2.8rem;
+    line-height: 3.545rem;
+    margin-bottom: 0.7rem;
+  }
+  .card__content p {
+    max-width: 340px;
+    font-size: 1.5rem;
+  }
+  .card__rating {
+    margin-bottom: 3.2rem;
+  }
+  .card__rating ul li button {
+    width: 51px;
+    height: 51px;
+    font-size: 1.6rem;
+  }
+  .thank__card {
+    padding: 4.5rem 4rem 4.5rem 3.2rem;
+  }
+  .thank__card__img {
+    margin-bottom: 3.2rem;
+  }
+  .thank__card .output__text {
+    display: inline-block;
+    padding: 0.6rem 2rem;
+    margin-bottom: 3.6rem;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+  .thank__card__content h1 {
+    margin-bottom: 0.7rem;
+  }
+  .thank__card__content p {
+    max-width: 340px;
+  }
+}

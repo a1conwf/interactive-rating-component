@@ -1,0 +1,270 @@
+@import "./globals";
+@import "./variables";
+@import "./mixins";
+
+//Both cards
+.card,
+.thank__card {
+    background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+    border-radius: 3rem;
+}
+
+//Main card
+.card {
+
+    //Star
+    &__star {
+        @include flexCenter(row);
+        background-color: $darkBlue;
+        border-radius: 50%;
+    }
+
+    //Main content
+    &__content {
+        h1 {
+            margin-bottom: 0.7rem;
+        }
+
+        p {
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    //Rating numbers
+    &__rating {
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+        ul li button {
+            @include flexCenter(row);
+            font-weight: 700;
+            line-height: 2.4rem;
+            color: $mediumGrey;
+            background-color: $darkBlue;
+            border: none;
+            outline: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease-in;
+
+            &:hover:not(.active) {
+                background-color: $mediumGrey;
+                color: $white;
+            }
+        }
+    }
+
+    //Button
+    .submit__btn {
+        width: 100%;
+        padding: 1.1rem 0;
+        border: none;
+        outline: none;
+        border-radius: 2.25rem;
+        background-color: $orange;
+        color: $white;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.899rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            background-color: $white;
+            color: $orange;
+        }
+    }
+
+    .active {
+        background-color: $orange;
+        color: $white;
+    }
+}
+
+//Thank card
+.thank__card {
+    text-align: center;
+
+    //Output text
+    .output__text {
+        display: inline-block;
+        color: $orange;
+        background-color: $darkBlue;
+        border-radius: 2.25rem;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+//Media queries
+@media screen and (min-width: 320px) {
+
+    //Both cards
+    .card,
+    .thank__card {
+        width: 300px;
+    }
+
+    //Main card
+    .card {
+        padding: 2.4rem 2.4rem 3.2rem;
+
+        //Star
+        &__star {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1.6rem;
+
+            img {
+                width: 14px;
+                height: 14px;
+            }
+        }
+
+        //Main content
+        &__content {
+            h1 {
+                font-size: 2.4rem;
+                line-height: 3.038rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                max-width: 279px;
+                font-size: 1.4rem;
+            }
+        }
+
+        //Rating numbers
+        &__rating {
+            margin-bottom: 2.4rem;
+
+            ul li button {
+                width: 42px;
+                height: 42px;
+                font-size: 1.4rem;
+            }
+        }
+
+    }
+
+    //Thank card
+    .thank__card {
+        padding: 3.4rem 2.4rem 3.7rem 2.4rem;
+
+        //Card img
+        &__img {
+            margin-bottom: 2.4rem;
+        }
+
+        //Output text
+        .output__text {
+            padding: 0.5rem 1.2rem;
+            margin-bottom: 2.9rem;
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+        }
+
+        //Card main content
+        &__content {
+
+            h1 {
+                margin-bottom: 1.7rem;
+            }
+
+            p {
+                max-width: 279px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    //Both cards
+    .card,
+    .thank__card {
+        width: 412px;
+    }
+
+    //Main card
+    .card {
+        padding: 3.2rem 3.9rem 3.2rem;
+
+        //Star
+        &__star {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 3rem;
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        //Main content
+        &__content {
+            h1 {
+                font-size: 2.8rem;
+                line-height: 3.545rem;
+                margin-bottom: 0.7rem;
+            }
+
+            p {
+                max-width: 340px;
+                font-size: 1.5rem;
+            }
+        }
+
+        //Rating numbers
+        &__rating {
+            margin-bottom: 3.2rem;
+
+            ul li button {
+                width: 51px;
+                height: 51px;
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    //Thank card
+    .thank__card {
+        padding: 4.5rem 4rem 4.5rem 3.2rem;
+
+        //Card img
+        &__img {
+            margin-bottom: 3.2rem;
+        }
+
+        //Output text
+        .output__text {
+            display: inline-block;
+            padding: 0.6rem 2rem;
+            margin-bottom: 3.6rem;
+            font-size: 1.5rem;
+            line-height: 2.4rem;
+        }
+
+        //Card main content
+        &__content {
+
+            h1 {
+                margin-bottom: 0.7rem;
+            }
+
+            p {
+                max-width: 340px;
+            }
+        }
+    }
+}
